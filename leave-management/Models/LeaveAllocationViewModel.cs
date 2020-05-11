@@ -15,7 +15,7 @@ namespace leave_management.Models
         public DateTime DateCreated { get; set; }
         public EmployeeViewModel Employee { get; set; }
         public string EmployeeId { get; set; } //its a string because that way is define in the database
-        public DetailsLeaveTypeViewModel LeaveType { get; set; }
+        public LeaveTypeViewModel LeaveType { get; set; }
         public int LeaveTypeId { get; set; }
 
         public IEnumerable<SelectListItem> Employees { get; set; }
