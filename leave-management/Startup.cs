@@ -43,10 +43,10 @@ namespace leave_management
             services.AddAutoMapper(typeof(Maps));
 
             /* here we ask for email confirmation
-            services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
+            services.AddDefaultIdentity<Employee>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddEntityFrameworkStores<ApplicationDbContext>();*/
             //this is without confirmation
-            services.AddDefaultIdentity<IdentityUser>()
+            services.AddDefaultIdentity<Employee>()
                .AddRoles<IdentityRole>()
                .AddEntityFrameworkStores<ApplicationDbContext>();
 
@@ -58,7 +58,7 @@ namespace leave_management
         public void Configure(
             IApplicationBuilder app,
             IWebHostEnvironment env,
-            UserManager<IdentityUser> userManager,
+            UserManager<Employee> userManager,
             RoleManager<IdentityRole> roleManager)
         {
             if (env.IsDevelopment())
