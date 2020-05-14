@@ -36,7 +36,7 @@ namespace leave_management
                     Configuration.GetConnectionString("DefaultConnection")));
             //Add reference for repository and contracts to Startup file
             services.AddScoped<ILeaveTypeRepository, LeaveTypeRepository>();
-            services.AddScoped<ILeaveHistoryRepository, LeaveHistoryRepository>();
+            services.AddScoped<ILeaveRequestRepository, LeaveRequestRepository>();
             services.AddScoped<ILeaveAllocationRepository, LeaveAllocationRepository>();
 
             //service that adds an automapper configuration file in the type of this maps file
